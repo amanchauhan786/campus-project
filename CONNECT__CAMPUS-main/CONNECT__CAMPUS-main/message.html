@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interact</title>
+  <style>
+    body {
+      background-image: url("teach.jpg");
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    input {
+      margin-top: 10px;
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      border: none;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Enter Your Message For Your Faculty</h1>
+    <input type="text" placeholder="Your Message">
+    <button class="submit-button">Submit</button>
+  </div>
+
+  <script>
+    const submitButton = document.querySelector('.submit-button');
+    submitButton.addEventListener('click', () => {
+      alert('Thank you! The faculty will soon contact you.');
+    });
+  </script>
+</body>
+</html>

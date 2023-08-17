@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual Class</title>
+  <style>
+    body {
+      background-image: url("virtual2.jpg");
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .chat,
+    .file-sharing,
+    .whiteboard,
+    .polls,
+    .quizzes {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      border: none;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Virtual Class</h1>
+    <p>This is a virtual class where students can attend classes, take notes, and interact with their classmates and teacher.</p>
+    <div class="chat">
+      <h2>Chat</h2>
+      <p>This is a chat room where students can communicate with each other in real time.</p>
+      <input type="text" placeholder="Type your message here">
+      <button>Send</button>
+    </div>
+    <div class="file-sharing">
+      <h2>File Sharing</h2>
+      <p>This is a file sharing area where students can share files with each other.</p>
+      <input type="file">
+      <button>Share</button>
+    </div>
+    <div class="whiteboard">
+      <h2>Whiteboard</h2>
+      <p>This is a whiteboard where students can collaborate on projects.</p>
+    </div>
+    <div class="polls">
+      <h2>Polls</h2>
+      <p>This is a polls area where students can participate in surveys and polls.</p>
+      <input type="text" placeholder="Enter your question here">
+      <button>Create Poll</button>
+    </div>
+    <div class="quizzes">
+      <h2>Quizzes</h2>
+      <p>This is a quizzes area where students can test their knowledge.</p>
+      <input type="text" placeholder="Enter your question here">
+      <button>Create Quiz</button>
+    </div>
+  </div>
+</body>
+</html>

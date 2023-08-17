@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collaborate</title>
+  <style>
+    body {
+      background-image: url("collab.jpg");
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    input {
+      margin-top: 10px;
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    select {
+      margin-top: 10px;
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      border: none;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Collaboration Request</h1>
+    <input type="text" placeholder="Enter Your Branch Name">
+    <select id="professor">
+      <option value="John">John</option>
+      <option value="Milly">Milly</option>
+      <option value="Aryujna">Aryujna</option>
+      <option value="MN Srinivas">MN Srinivas</option>
+      <option value="Virat">Virat</option>
+      <option value="Sachin">Sachin</option>
+    </select>
+    <button class="submit-button">Submit</button>
+  </div>
+
+  <script>
+    const submitButton = document.querySelector('.submit-button');
+    submitButton.addEventListener('click', () => {
+      const branchName = document.querySelector('input').value;
+      const professorName = document.querySelector('#professor').value;
+      alert(`You have successfully sent a request to Professor ${professorName} from ${branchName}. They will contact you soon.`);
+    });
+  </script>
+</body>
+</html>

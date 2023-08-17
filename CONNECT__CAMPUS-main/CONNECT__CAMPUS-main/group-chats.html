@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Group Chats</title>
+  <style>
+    /* Basic CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('grp.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .chat-container {
+      max-height: 300px;
+      overflow-y: scroll;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .chat-message {
+      margin-bottom: 10px;
+    }
+
+    .chat-message .sender {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .chat-message .message {
+      margin-top: 5px;
+    }
+
+    .chat-input {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .chat-input input[type="text"] {
+      flex: 1;
+      padding: 5px;
+    }
+
+    .chat-input input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // JavaScript function to send a chat message
+    function sendMessage() {
+      var messageInput = document.getElementById("message-input");
+      var message = messageInput.value.trim();
+      
+      if (message !== "") {
+        var chatContainer = document.getElementById("chat-container");
+        var chatMessage = document.createElement("div");
+        chatMessage.className = "chat-message";
+        chatMessage.innerHTML = '<span class="sender">You:</span><span class="message">' + message + '</span>';
+        chatContainer.appendChild(chatMessage);
+        messageInput.value = "";
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Group Chats</h2>
+
+    <div id="chat-container" class="chat-container">
+      <div class="chat-message">
+        <span class="sender">John:</span>
+        <span class="message">Hey, is anyone available to discuss the assignment?</span>
+      </div>
+      <div class="chat-message">
+        <span class="sender">Alice:</span>
+        <span class="message">I'm free right now. What do you need help with?</span>
+      </div>
+      <!-- More chat messages can be added dynamically -->
+    </div>
+
+    <div class="chat-input">
+      <input id="message-input" type="text" placeholder="Type your message...">
+      <input type="submit" value="Send" onclick="sendMessage()">
+    </div>
+  </div>
+</body>
+</html>

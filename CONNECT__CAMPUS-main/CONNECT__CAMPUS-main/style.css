@@ -1,0 +1,107 @@
+/* Global Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header Styles */
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Hero Section Styles */
+  
+  .hero {
+    background-image: url('logo.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  /* Button Styles */
+  
+  .btn {
+    display: inline-block;
+    background-color: #e91e63;
+    color: #fff;
+    padding: 12px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #c2185b;
+  }
+  
+  /* Section Styles */
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  section h2 {
+    font-size: 32px;
+  }
+  
+  section p {
+    font-size: 18px;
+  }
+  
+  /* Virtual Tour Section Styles */
+  
+  .virtual-tour {
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .virtual-tour h2 {
+    font-size: 36px;
+  }
+  
+  .virtual-tour p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Footer Styles */
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('build1.jpg'); /* Add the background image path and name */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 40px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: white; /* Set the background color to white */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+
+    .form-group .forgot-password {
+      text-align: right;
+    }
+
+    .form-group .forgot-password a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    #success-message {
+      display: none;
+      text-align: center;
+    }
+
+    #success-message p {
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function redirectToConnectCampus() {
+      setTimeout(function() {
+        window.location.href = "connect_campus.html";
+      }, 2000);
+    }
+
+    function showSuccessMessage() {
+      var successMessage = document.getElementById("success-message");
+      successMessage.style.display = "block";
+      setInterval(function() {
+        successMessage.style.visibility = (successMessage.style.visibility === "hidden") ? "visible" : "hidden";
+      }, 500);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+      </div>
+
+      <div class="form-group">
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="button" onclick="redirectToConnectCampus(); showSuccessMessage();">Login</button>
+      </div>
+    </form>
+
+    <div id="success-message">
+      <p>Signed successfully</p>
+    </div>
+  </div>
+</body>
+</html>

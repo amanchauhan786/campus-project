@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Announcement and Updates</title>
+  <style>
+    body {
+      background-image: url('announ.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    #confirmationMessage {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    #announcementList {
+      list-style: none;
+      padding: 0;
+    }
+    #announcementList li {
+      margin-bottom: 10px;
+    }
+  </style>
+  <script>
+    function submitForm() {
+      var studentName = document.getElementById("studentName").value;
+      var branchName = document.getElementById("branchName").value;
+      var announcements = [
+        "CSE group meet on Monday this week.",
+        "University is celebrating the sports day on Saturday.",
+        "Industrial visit to factory."
+      ];
+    
+      var announcementList = document.getElementById("announcementList");
+      announcementList.innerHTML = "";
+    
+      announcements.forEach(function(announcement) {
+        var listItem = document.createElement("li");
+        listItem.textContent = announcement;
+        announcementList.appendChild(listItem);
+      });
+    
+      var confirmationMessage = "Thank you, " + studentName + "! Here are the recent announcements and updates:";
+      document.getElementById("confirmationMessage").textContent = confirmationMessage;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Announcement and Updates</h1>
+    <form>
+      <label for="studentName">Student Name:</label>
+      <input type="text" id="studentName" name="studentName">
+      <br>
+      <label for="branchName">Branch:</label>
+      <input type="text" id="branchName" name="branchName">
+      <br>
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <div id="confirmationMessage"></div>
+    <h2>Recent Announcements and Updates:</h2>
+    <ul id="announcementList"></ul>
+  </div>
+</body>
+</html>

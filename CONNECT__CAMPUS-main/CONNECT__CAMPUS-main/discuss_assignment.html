@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discuss Assignment</title>
+  <style>
+    body {
+      background-image: url("discuss.jpg");
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    input {
+      margin-top: 10px;
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      border: none;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #555;
+    }
+
+    .container h1 {
+      font-weight: bold;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Enter Your Assignment</h1>
+    <input type="text" placeholder="Your Assignment">
+    <button class="submit-button">Submit</button>
+  </div>
+
+  <script>
+    const submitButton = document.querySelector('.submit-button');
+    submitButton.addEventListener('click', () => {
+      alert('You have successfully entered the assignment. Soon someone will join to discuss the assignment.');
+    });
+  </script>
+</body>
+</html>

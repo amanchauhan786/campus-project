@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lecture Notes Repository</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("book1.jpg"); /* Replace "book1.jpg" with the actual image file name */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #000; /* Set the text color to black */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #000; /* Set the text color to black */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .feedback-section {
+      margin-top: 30px;
+    }
+
+    .feedback-section label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .feedback-section input,
+    .feedback-section textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .feedback-section button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .feedback-section button:hover {
+      background-color: #45a049;
+    }
+
+    .subjects-section {
+      text-align: right; /* Align the subjects section to the right */
+    }
+
+    .subjects-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      list-style-type: none; /* Remove default bullet points */
+      padding-left: 0; /* Remove default padding */
+    }
+
+    .subjects-list li {
+      margin-bottom: 10px;
+    }
+
+    .subjects-list li a {
+      display: inline-block;
+      padding: 8px 16px; /* Add padding to make it look like a button */
+      background-color: #4CAF50; /* Button background color */
+      color: white; /* Button text color */
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .subjects-list li a:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lecture Notes Repository</h1>
+
+    <div class="subjects-section">
+      <h2>Subjects</h2>
+      <ul class="subjects-list">
+        <li><a href="math_notes.html">Mathematics</a></li>
+        <li><a href="physics_notes.html">Physics</a></li>
+        <li><a href="chemistry_notes.html">Chemistry</a></li>
+        <li><a href="biology_notes.html">Biology</a></li>
+        <li><a href="computer_science_notes.html">Computer Science</a></li>
+      </ul>
+    </div>
+
+    <div class="feedback-section">
+      <h2 style="text-align: left;">Feedback</h2>
+      <p>Please provide your feedback on the repository:</p>
+
+      <form action="https://formspree.io/f/mzbqldqy" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="_replyto" placeholder="Enter your email ID">
+
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" name="feedback" placeholder="Enter your feedback"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

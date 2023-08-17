@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Webpage</title>
+  <style>
+    body {
+      background-image: url("clock.jpg");
+      background-size: cover;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      border: none;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+  <script>
+    function scheduleAppointment() {
+      var studentName = prompt("Enter your name:");
+      var teacherName = prompt("Enter the teacher's name:");
+      var appointmentDate = prompt("Enter the appointment date:");
+      
+      var confirmationMessage = "Thank you, " + studentName + "! Your appointment with " + teacherName + " on " + appointmentDate + " is fixed. Your teacher will connect with you shortly.";
+      
+      alert(confirmationMessage);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>My Webpage</h1>
+    <p>Welcome to my webpage! Feel free to explore and use the features available.</p>
+
+    <!-- Rest of your webpage content here -->
+
+    <button onclick="scheduleAppointment()">Appointment Scheduler</button>
+  </div>
+</body>
+</html>

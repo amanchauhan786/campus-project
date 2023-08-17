@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Score Point System</title>
+  <style>
+    body {
+      background-image: url('cpu.jpg'); /* Add the background image path and name */
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: white;
+    }
+    
+    h1 {
+      text-align: center;
+      padding-top: 30px;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 30px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      color: #333333;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 12px 20px;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+      color: #333333;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .success-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    
+  </style>
+  <script>
+    function showSuccessMessage() {
+      var successMessage = document.getElementById("success-message");
+      successMessage.style.display = "block";
+      setTimeout(function() {
+        successMessage.style.display = "none";
+        window.location.href = "connect_campus.html"; // Redirect back to the same page
+      }, 5000); // Delay for 5 seconds before redirecting
+    }
+  </script>
+</head>
+<body>
+  <h1>Score Point System</h1>
+  
+  <div class="score-input">
+    <h2>Upload Certification</h2>
+    <form method="POST" enctype="multipart/form-data" action="#" onsubmit="showSuccessMessage(); return false;">
+      <input type="file" name="certificate" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="leaderboard">
+    <h2>Leaderboard</h2>
+    <table>
+      <tr>
+        <th>Ranking</th>
+        <th>Student</th>
+        <th>Score</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John Doe</td>
+        <td>85</td>
+      </tr>
+      <!-- Other table rows -->
+      <tr>
+        <td>2</td>
+        <td>You</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Dylan Ramirez</td>
+        <td>79</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Lucy Turner</td>
+        <td>84</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Emily Johnson</td>
+        <td>91</td>
+      </tr>
+    </table>
+
+    <p>You need 10 more points to win a gift voucher.</p>
+
+    <table>
+      <tr>
+        <th>Student</th>
+        <th>Gift Voucher Balance</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>$100</td>
+      </tr>
+      <!-- Other table rows -->
+      <tr>
+        <td>You</td>
+        <td>$0</td>
+      </tr>
+      <tr>
+        <td>Dylan Ramirez</td>
+        <td>$0</td>
+      </tr>
+      <tr>
+        <td>Lucy Turner</td>
+        <td>$0</td>
+      </tr>
+      <tr>
+        <td>Emily Johnson</td>
+        <td>$0</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="success-message" class="success-message" style="display: none;">
+    <p style="color: rgb(6, 6, 6); font-weight: bold;">File uploaded successfully</p>
+  </div>
+</body>
+</html>

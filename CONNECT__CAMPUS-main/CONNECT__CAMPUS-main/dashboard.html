@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .course {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .course h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .course p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #777;
+        }
+
+        .course .enroll-btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .course .exam-date,
+        .course .class-timing,
+        .course .assignment-deadline,
+        .course .sports-achievement {
+            font-size: 16px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            border-radius: 5px;
+            width: 300px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .close-btn {
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var enrollButtons = document.querySelectorAll(".enroll-btn");
+            var popup = document.querySelector(".popup");
+            var closeBtn = document.querySelector(".close-btn");
+
+            enrollButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    popup.style.display = "block";
+                    setTimeout(function() {
+                        popup.style.display = "none";
+                    }, 3000); // 3 seconds
+                });
+            });
+
+            closeBtn.addEventListener("click", function() {
+                popup.style.display = "none";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Course Dashboard</h1>
+        <div class="course">
+            <h2>Differential Equations</h2>
+            <p>Course Description A differential equation is an equation which contains one or more terms and the derivatives of one variable (i.e., dependent variable) with respect to the other variable (i.e., independent variable) dy/dx = f(x) Here “x” is an independent variable and “y” is a dependent variable. For example, dy/dx = 5x. </p>
+            <p class="exam-date">Exam Date: 23rd January 2014 (23 days remaining for the exam)</p>
+            <p class="class-timing">Class Timing: Monday, Wednesday, Friday - 10:00 AM to 11:30 AM</p>
+            <p class="assignment-deadline">Assignment Deadline: 20th January 2014</p>
+            <p class="sports-achievement">Sports Achievement: Winner of Intercollegiate Mathematics Quiz</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+        <div class="course">
+            <h2>Spanish</h2>
+            <p>Course Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="exam-date">Exam Date: 15th February 2014 (10 days remaining for the exam)</p>
+            <p class="class-timing">Class Timing: Tuesday, Thursday - 2:00 PM to 4:00 PM</p>
+            <p class="assignment-deadline">Assignment Deadline: 12th February 2014</p>
+            <p class="sports-achievement">Sports Achievement: Runner-up in College Football Tournament</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+        <div class="course">
+            <h2>English Communication</h2>
+            <p>The imparting or exchanging of information by speaking, writing, or using some other medium. …The successful conveying or sharing of ideas and feelings. Oxford English Dictionary. As this definition makes clear, communication is more than simply the transmission of information.</p>
+            <p class="exam-date">Exam Date: 5th March 2014 (18 days remaining for the exam)</p>
+            <p class="class-timing">Class Timing: Monday, Wednesday - 9:00 AM to 10:30 AM</p>
+            <p class="assignment-deadline">Assignment Deadline: 1st March 2014</p>
+            <p class="sports-achievement">Sports Achievement: Silver Medal in College Debate Competition</p>
+            <a href="#" class="enroll-btn">Enroll Now</a>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup">
+        <div class="popup-content">
+            <p>Enrolled successfully!</p>
+            <span class="close-btn">Close</span>
+        </div>
+    </div>
+</body>
+</html>
